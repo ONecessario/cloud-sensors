@@ -67,54 +67,26 @@
 			
 			// Chart.js 
 			const ctx = document.getElementById('myChart');
-			const generateLabels = () => [...'abced'];
+			const generateLabels = () => [...'1','2','3','4','5','6','7','8','9','10'];
 			const generateData = () => Array(5).fill(' ').map( e => Math.floor(Math.random()*100));
 			const data = {
   			  labels: generateLabels(),
   			  datasets: [
-    			{
-      			  label: 'D0',
-      			  data: generateData(),
-      			  hidden: true
-    			},
-    			{
-      			  label: 'D1',
-      			  data: generateData(),
-    			},
-    			{
-      			  label: 'D2',
-      			  data: generateData(),
-      			  hidden: true,
-    			},
-    			{
-      			  label: 'D3',
-      			  data: generateData(),
-    			},
-    			{
-      			  label: 'D4',
-      			  data: generateData(),
-    			},
-    			{
-      			  label: 'D5',
-      			  data: generateData(),
-    			},
-    			{
-      			  label: 'D6',
-      			  data: generateData(),
-    			},
-    			{
-      			  label: 'D7',
-      			  data: generateData(),
-    			},
-    			{
-      			  label: 'D8',
-      			  data: generateData(),
-      			  hidden: true
-    			},
-    			{
-      			  label: 'D9',
-      			  data: generateData(),
-    			}
+	    			{
+	      			  label: 'Temperatura (C°)',
+	      			  data: generateData(),
+	      			  hidden: false
+	    			},
+	    			{
+	      			  label: 'Umidade (g/m³)',
+	      			  data: generateData(),
+	      			  hidden: false
+	    			},
+	    			{
+	      			  label: 'Sensor Analógico',
+	      			  data: generateData(),
+	      			  hidden: false,
+	    			},
   			  ]
 			};
 			const chart = new Chart(ctx, {
